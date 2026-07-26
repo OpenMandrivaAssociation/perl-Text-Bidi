@@ -1,15 +1,13 @@
 %define upstream_name    Text-Bidi
-%define upstream_version 2.08
-
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    1
+Version:    2.08
+Release:    2
 
 Summary:    Dual-life long arrays
 License:    GPL or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Text/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl
@@ -62,7 +60,7 @@ Standard usage
     text is broken into paragraphs.
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version}
+%setup -qn %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
